@@ -3,7 +3,7 @@
 #include <stdio.h>
 /* more headers goes there */
 
-/* 
+/*
  * main - test de valeur aleatoire
  *
  * Return: Always 0 (Success)
