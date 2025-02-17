@@ -1,7 +1,7 @@
 #include "stdio.h"
 
 /**
- * main - Affiche la taille des int long float et char 
+ * main - Affiche la taille des int long float et char
  *
  * Return: Always 0 (Success)
  */
