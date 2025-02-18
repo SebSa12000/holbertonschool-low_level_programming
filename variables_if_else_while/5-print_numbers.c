@@ -3,7 +3,7 @@
 #include <time.h>
 
 /**
- * main - Affiche les chiffres de 0 a 9 
+ * main - Affiche les chiffres de 0 a 9
  *
  * Return: Always (Success)
  */
