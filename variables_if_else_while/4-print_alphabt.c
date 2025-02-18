@@ -12,7 +12,7 @@ int main(void)
 	char caractere = 'a';
 
 	do {
-		if ((caractere != 'q') || (caractere != 'e'))
+		if (!((caractere == 'q') || (caractere == 'e')))
 			putchar(caractere);
 		caractere++;
 	} while (caractere <= 'z');
