@@ -3,7 +3,7 @@
 #include <time.h>
 
 /**
- * test last digit d'un nombre aléatoir
+ * int main(void) : test last digit d'un nombre aléatoie
  *
  * Return: Always 0 (Success)
  */
