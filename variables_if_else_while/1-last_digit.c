@@ -3,9 +3,9 @@
 #include <time.h>
 
 /**
- * int main(void) : test last digit d'un nombre aléatoie
+ * main - Test > 5 or 0
  *
- * Return: Always 0 (Success)
+ * Return: Always (Success)
  */
 int main(void)
 {
