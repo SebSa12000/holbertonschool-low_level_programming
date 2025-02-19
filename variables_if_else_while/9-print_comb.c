@@ -9,20 +9,20 @@
  */
 int main(void)
 {
-	unsigned int caractere = 48;
+	int c = 48;
 
 	do {
-		/* affichage du caracte¨re */
-		putchar(caractere);
-		if (caractere != 57)
+		/* affichage du c */
+		putchar(c);
+		if (c != 57)
 		{
 			putchar(44);
 			putchar(32);
 		}
 		/* increment */
-		caractere++;
+		c++;
 
-	} while (caractere <= 57);
+	} while (c <= 57);
 	putchar(10);
 	return (0);
 }
