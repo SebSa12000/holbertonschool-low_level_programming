@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - test d'affichage 
+ * main - test d'affichage
  * permet de tester des valeurs aleatoire positive ou negative
  *
  * Return: Always 0 (Success)
