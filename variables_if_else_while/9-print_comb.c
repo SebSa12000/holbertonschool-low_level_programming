@@ -9,20 +9,20 @@
  */
 int main(void)
 {
-	int caractere = '0';
+	unsigned int caractere = 48;
 
 	do {
 		/* affichage du caracte¨re */
 		putchar(caractere);
-		if (caractere != '9')
+		if (caractere != 57)
 		{
-			putchar(',');
-			putchar(' ');
+			putchar(44);
+			putchar(32);
 		}
 		/* increment */
 		caractere++;
 
-	} while (caractere <= '9');
-	putchar('\n');
+	} while (caractere <= 57);
+	putchar(10);
 	return (0);
 }
