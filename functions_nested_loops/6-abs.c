@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * abs - renvoi la valeur absolu
+ * _abs - renvoi la valeur absolu
  * @c: valeur
  *
  * Return: valeur absolue
