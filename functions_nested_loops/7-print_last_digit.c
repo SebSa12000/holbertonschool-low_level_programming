@@ -10,9 +10,11 @@ int print_last_digit(int i)
 {
 	int valeur = 0;
 	if ( i < 0 ) 
-		valeur = ( (int) (i*-1) )  % 10;
+		valeur = (i*-1) % 10;
 	else 
 		valeur = i % 10;
+	if ( i< 0 || i> 9)
+		_putchar('E');
 	_putchar(valeur + '0');
 	return (valeur);
 }
