@@ -6,8 +6,6 @@
  */
 void times_table(void)
 {
-	int last = 0;
-	int last2 = 0;
 	int i = 0;
 	int j = 0;
 	int mult = 0;
@@ -42,4 +40,6 @@ void times_table(void)
 			}
 
 		}
+		_putchar('\n');
 	}
+}
