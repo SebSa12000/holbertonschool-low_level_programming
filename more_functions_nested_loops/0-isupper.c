@@ -1,6 +1,7 @@
 #include "main.h"
 /**
- * isupper - teste si c'est une fonction majuscule 
+ * _isupper - teste si c'est une fonction majuscule
+ * @c : caractere to check
  *
  * Return: true or false
  */
