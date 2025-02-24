@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_diagonal - affiche une ligne en diagonale 
+ * print_diagonal - affiche une ligne en diagonale
  *@n : nombre de \
  *
  */
@@ -11,12 +11,11 @@ void print_diagonal(int n)
 
 	if (n > 0)
 	{
-		do 
-		{
+		do {
 			last++;
 			for (i = 0; i < last; i++)
 			{
-				if ( i < last - 1 )
+				if (i < last - 1)
 					_putchar(' ');
 				else
 					_putchar('\\');
