@@ -10,7 +10,7 @@ void rev_string(char *s)
 {
 	char *inc = s;
 	int maxlen = 0, cpt = 0, len = 0, j = 0;
-	char *tempo = malloc(sizeof(char) * strlen(s) + 1);
+	char tempo[10] = "My school"; 
 	char *ptempo = tempo;
 
 	while (*inc != '\0')
