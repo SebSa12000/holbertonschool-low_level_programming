@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * _puts2 - longueur d'une chaine
+ * puts2 - longueur d'une chaine
  * @s: chaine de caractere
  *
  */
-void _puts2(char *s)
+void puts2(char *s)
 {
 	char *inc = s;
 	int flag = 1;
