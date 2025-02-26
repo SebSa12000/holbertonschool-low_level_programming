@@ -13,6 +13,7 @@ void rev_string(char *s)
 	int maxlen = 0, cpt = 0, len = 0, j = 0;
 	char *tempo = NULL;
 	char *ptempo = NULL;
+
 	while (*inc != '\0')
 	{
 		inc++;
