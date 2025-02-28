@@ -14,14 +14,14 @@ int _atoi(char *s)
 
 	while ((s[i] != '\0') && (fini == 0))
 	{
-		if (s[i] == 32)
+		if (s[i] == ' ')
 		{
 			if ((fini == 0) && (!retour))
 				fini = 1;
 		}
-		else if ((s[i] > 47 ) && (s[i] < 58))
+		else if ((s[i] > 47) && (s[i] < 58))
 		{
-			retour = retour * 10 + (s[i] - 48);
+			retour = retour * 10 + (s[i] - '0');
 			if (flagneg == 1)
 			{
 				retour = -retour;
