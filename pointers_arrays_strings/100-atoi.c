@@ -19,7 +19,7 @@ int _atoi(char *s)
 			if ((fini == 0) && (retour > 0))
 				fini = 1;
 		}
-		else if ((s[i] >= '0') && (s[i] <= '9'))
+		else if ((s[i] >= 48 ) && (s[i] <= 57))
 		{
 			retour = retour * 10 + ((char)s[i] - 48);
 			if (flagneg == 1)
