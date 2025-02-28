@@ -16,10 +16,10 @@ int _atoi(char *s)
 	{
 		if (s[i] == 32)
 		{
-			if ((fini == 0) && (retour > 0))
+			if ((fini == 0) && (!retour))
 				fini = 1;
 		}
-		else if ((s[i] >= 48 ) && (s[i] <= 57))
+		else if ((s[i] > 47 ) && (s[i] < 58))
 		{
 			retour = retour * 10 + (s[i] - 48);
 			if (flagneg == 1)
