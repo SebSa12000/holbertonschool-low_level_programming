@@ -23,7 +23,7 @@ int _atoi(char *s)
 			retour = retour * 10 + ((char)s[i] - 48);
 			if (flagneg == 1)
 			{
-				retour = retour * -1;
+				retour = -retour;
 				flagneg = 0;
 			}
 		}
