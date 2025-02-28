@@ -21,6 +21,11 @@ int _atoi(char *s)
 		else if ((s[i] >= '0') && (s[i] <= '9'))
 		{
 			retour = retour * 10 + ((char)s[i] - 48);
+			if (flagneg == 1)
+			{
+				retour = retour * -1;
+				flagneg = 0;
+			}
 		}
 		else if (s[i] == '-')
 		{
@@ -31,8 +36,5 @@ int _atoi(char *s)
 		}
 		i++;
 	}
-	if (flagneg == 1)
-		return (-(retour));
-	else
-		return (retour);
+	return (retour);
 }
