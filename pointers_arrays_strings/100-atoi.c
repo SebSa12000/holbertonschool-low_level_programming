@@ -14,9 +14,10 @@ int _atoi(char *s)
 
 	while ((s[i] != '\0') && (fini == 0))
 	{
-		if ((s[i] == ' ') && (fini == 0) && (retour > 0))
+		if (s[i] == ' ')
 		{
-			fini = 1;
+			if ((fini == 0) && (retour > 0))
+				fini = 1;
 		}
 		else if ((s[i] >= '0') && (s[i] <= '9'))
 		{
