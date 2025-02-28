@@ -21,7 +21,7 @@ int _atoi(char *s)
 		}
 		else if ((s[i] >= 48 ) && (s[i] <= 57))
 		{
-			retour = retour * 10 + ((char)s[i] - 48);
+			retour = retour * 10 + (s[i] - 48);
 			if (flagneg == 1)
 			{
 				retour = -retour;
