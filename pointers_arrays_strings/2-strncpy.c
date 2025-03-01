@@ -15,7 +15,7 @@ char *_strncpy(char *dest, char *src, int n)
 	int i = 0;
 	int trouve_fin_src = 0;
 
-	while (*src2 != '\0' && i < n )
+	while (*src2 != '\0' && i < n)
 	{
 		*dest2 = *src2;
 
@@ -25,7 +25,7 @@ char *_strncpy(char *dest, char *src, int n)
 	}
 	if (*src2 == '\0')
 		trouve_fin_src = 1;
-	while ( i < n )
+	while (i < n)
 	{
 		if (trouve_fin_src == 0)
 			*dest2 = *src2;
