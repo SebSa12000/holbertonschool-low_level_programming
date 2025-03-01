@@ -17,10 +17,12 @@ char *leet(char *chaine)
 
 	while (*chaine2 != '\0')
 	{
-		for (i = 0; i < (int)strlen(convert); i++)
+		i = 0;
+		for (convert[i] != '\0')
 		{
 			if (*chaine2 == convert[i])
 				*chaine2 = convert2[i];
+			i++;
 		}
 		chaine2++;
 	}
