@@ -1,4 +1,6 @@
 #include "main.h"
+#include <string.h>
+#include <stdio.h>
 /**
  * leet - converti en leet
  * @chaine : chaine a leeter
@@ -7,31 +9,18 @@
  */
 char *leet(char *chaine)
 {
+	int i = 0;
 	char *retour = chaine;
 	char *chaine2 = chaine;
+	char *convert = "aAlLoOtTeE";
+	char *convert2 = "4411007733";
 
 	while (*chaine2 != '\0')
 	{
-		if (*chaine2 == 'a' || *chaine2 == 'A')
+		for (i = 0; i < (int)strlen(convert); i++)
 		{
-			*chaine2 = '4';
-		}
-		else if (*chaine2 == 'l' || *chaine2 == 'L')
-		{
-			*chaine2 = '1';
-		}
-
-		else if (*chaine2 == 'o' || *chaine2 == 'O')
-		{
-			*chaine2 = '0';
-		}
-		else if (*chaine2 == 't' || *chaine2 == 'T')
-		{
-			*chaine2 = '7';
-		}
-		else if (*chaine2 == 'e' || *chaine2 == 'E')
-		{
-			*chaine2 = '3';
+			if (*chaine2 == convert[i])
+				*chaine2 = convert2[i];
 		}
 		chaine2++;
 	}
