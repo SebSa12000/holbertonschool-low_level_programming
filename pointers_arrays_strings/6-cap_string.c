@@ -13,7 +13,11 @@ char *cap_string(char *chaine)
 
 	while (*chaine2 != '\0')
 	{
-		if (*chaine2 == ' ' || *chaine2 == '\n' || *chaine2 == '\t' || *chaine2 == '.')
+		if (*chaine2 == ' ' || *chaine2 == '\n')
+		{
+			next_cap = 1;
+		}
+		else if (*chaine2 == '\t' || *chaine2 == '.')
 		{
 			next_cap = 1;
 		}
