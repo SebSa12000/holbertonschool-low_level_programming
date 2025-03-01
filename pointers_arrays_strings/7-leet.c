@@ -18,7 +18,7 @@ char *leet(char *chaine)
 	while (*chaine2 != '\0')
 	{
 		i = 0;
-		for (convert[i] != '\0')
+		while (convert[i] != '\0')
 		{
 			if (*chaine2 == convert[i])
 				*chaine2 = convert2[i];
