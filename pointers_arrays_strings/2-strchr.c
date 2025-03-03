@@ -18,6 +18,9 @@ char *_strchr(char *chaine, char caractere_a_chercher)
 			return (src2);
 		src2++;
 	}
-	return (vide);
+	if (*src2 == '\0')
+		return (src2);
+	else
+		return (vide);
 }
 
