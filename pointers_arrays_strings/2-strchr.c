@@ -1,3 +1,4 @@
+#include <stddef.h>
 #include "main.h"
 /**
  * _strchr - conctene deux chaines
@@ -8,7 +9,7 @@
  */
 char *_strchr(char *chaine, char caractere_a_chercher)
 {
-	char *retour = chaine;
+	char *vide = NULL;
 	char *src2 = chaine;
 
 	while (*src2 != '\0')
@@ -17,6 +18,6 @@ char *_strchr(char *chaine, char caractere_a_chercher)
 			return (src2);
 		src2++;
 	}
-	return (retour);
+	return (vide);
 }
 
