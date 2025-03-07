@@ -1,1 +1,1 @@
-# langage C 
+# exercice argc et argv 
