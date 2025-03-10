@@ -4,6 +4,25 @@
 #include <stdio.h>
 
 /**
+ * _strlen - longeur de chaine
+ * @str : chaine1
+ *
+ * Return: longueur
+ */
+int _strlen(char *str)
+{
+	int retour = 0;
+	char *str2 = str;
+
+	if (str2 != NULL && *str2 != '\0')
+	{
+		retour++;
+		str2++;
+	}
+	return (retour);
+}
+
+/**
  * str_concat - concat de chaine
  * @str1 : chaine1
  * @str2 : chaine2
