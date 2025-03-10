@@ -31,42 +31,39 @@ int _strlen(char *str)
  */
 char *str_concat(char *str1, char *str2)
 {
-	unsigned int i = 0;
-	unsigned int longueur = 1;
+	unsigned int i = 0, j = 0;
+	unsigned int longueur1 = 0, longueur2 = 0;
 	char *pointeurstr1 = str1;
 	char *pointeurstr2 = str2;
 	char *pointeurretour = NULL;
 
 	if (str1 != NULL)
-		longueur += _strlen(str1);
+		str1 = "";
+
 	if (str2 != NULL)
-		longueur += _strlen(str2);
+		str2 = "";
+
+	longueur1 = _strlen(str1);
+	longueur2 = _strlen(str2);
 
 	/* si la longueur est positive */
-	if (longueur > 0)
-	{
-		char *retour = (char *)malloc(sizeof(char) * (longueur));
+	char *retour = (char *)malloc(sizeof(char) * (longueur1 + longueur2 + 1));
 
-		/* si la longueur est positive */
-		pointeurretour = retour;
-		if (retour != NULL)
+	/* si la longueur est positive */
+	pointeurretour = retour;
+	if (retour != NULL)
+	{
+		i = 0;
+		for (i = 0; i < longueur1; i++)
 		{
-			i = 0;
-			while (pointeurstr1 != NULL && *pointeurstr1 != '\0')
-			{
-				pointeurretour[i] = *pointeurstr1;
-				i++;
-				pointeurstr1++;
-			}
-			while (pointeurstr2 != NULL && *pointeurstr2 != '\0')
-			{
-				pointeurretour[i] = *pointeurstr2;
-				i++;
-				pointeurstr2++;
-			}
-			pointeurretour[i] = '\0';
-			return (retour);
+			pointeurretour[i] = str1[i];
 		}
+		for (j = 0; j < longueur2; j++)
+		{
+			pointeurretour[i + j] = str2[i];
+		}
+		pointeurretour[i + j] = '\0';
+		return (retour);
 	}
 	return ((char *)(NULL));
 }
