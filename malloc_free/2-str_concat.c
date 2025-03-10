@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 /**
- * _strlen - longeur de chaine
+ * _strln - longeur de chaine
  * @str : chaine1
  *
  * Return: longueur
@@ -37,7 +37,7 @@ char *str_concat(char *str1, char *str2)
 	char *pointeurstr2 = str2;
 	char *pointeurretour = NULL;
 
-	longueur = strlen(str1) + strlen(str2) + 1;
+	longueur = _strlen(str1) + _strlen(str2) + 1;
 	/* si la longueur est positive */
 	if (longueur > 0)
 	{
