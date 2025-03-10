@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * create_array - cree un tableau
  * @size : longueur
@@ -8,7 +9,7 @@
  */
 char *create_array(unsigned int size, char c)
 {
-	int i = 0;
+	unsigned int i = 0;
 	char *retour = (char *)malloc(sizeof(char) * size);
 
 	if (size > 0)
