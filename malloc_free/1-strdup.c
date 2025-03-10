@@ -14,14 +14,12 @@ char *_strdup(char *str)
 	char *pointeurretour = NULL;
 
 	if (pointeurstr != NULL)
-	{
 		/* Calcule la longueur de la chaine */
 		while (*pointeurstr != '\0')
 		{
 			pointeurstr++;
 			longueur++;
 		}
-	}
 	else
 		longueur = 0;
 	/* si la longueur est positive */
@@ -46,8 +44,6 @@ char *_strdup(char *str)
 
 				return ((char *)(retour));
 			}
-			else
-				return ((char *)(NULL));
 		}
 	}
 	return ((char *)(NULL));
