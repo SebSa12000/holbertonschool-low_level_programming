@@ -5,7 +5,7 @@
  * @size : longueur
  * @c : caractere
  *
- * Return : pointeur sur tableau
+ * Return: pointeur sur tableau
  */
 char *create_array(unsigned int size, char c)
 {
@@ -18,10 +18,10 @@ char *create_array(unsigned int size, char c)
 		{
 			for (i = 0; i < size; i++)
 				retour[i] = c;
-			return (char *)(retour);
+			return ((char *)(retour));
 		}
 		else
-			return (char *)(NULL);
+			return ((char *)(NULL));
 	}
-	return (char *)(NULL);
+	return ((char *)(NULL));
 }
