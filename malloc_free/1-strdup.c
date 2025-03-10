@@ -9,16 +9,21 @@
 char *_strdup(char *str)
 {
 	unsigned int i = 0;
-	unsigned int longueur = 0;
+	unsigned int longueur = 1;
 	char *pointeurstr = str;
 	char *pointeurretour = NULL;
 
-	/* Calcule la longueur de la chaine */
-	while (*pointeurstr != '\0')
+	if (pointeurstr != NULL)
 	{
-		pointeurstr++;
-		longueur++;
+		/* Calcule la longueur de la chaine */
+		while (*pointeurstr != '\0')
+		{
+			pointeurstr++;
+			longueur++;
+		}
 	}
+	else
+		longueur = 0;
 	/* si la longueur est positive */
 	if (longueur > 0)
 	{
