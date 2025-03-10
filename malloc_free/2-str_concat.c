@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 /**
- * _strln - longeur de chaine
+ * _strlen - longeur de chaine
  * @str : chaine1
  *
  * Return: longueur
@@ -32,18 +32,22 @@ int _strlen(char *str)
 char *str_concat(char *str1, char *str2)
 {
 	unsigned int i = 0;
-	unsigned int longueur = 1;
+	unsigned int longueur = 0;
 	char *pointeurstr1 = str1;
 	char *pointeurstr2 = str2;
 	char *pointeurretour = NULL;
 
-	longueur = _strlen(str1) + _strlen(str2) + 1;
+	if (str1 != NULL)
+		longueur += _strlen(str1);
+	if (str2 != NULL)
+		longueur += _strlen(str2);
+
 	/* si la longueur est positive */
 	if (longueur > 0)
 	{
-		char *retour = (char *)malloc(sizeof(char) * longueur);
+		char *retour = (char *)malloc(sizeof(char) * (longueur + 1));
 
-	/* si la longueur est positive */
+		/* si la longueur est positive */
 		pointeurretour = retour;
 		if (retour != NULL)
 		{
