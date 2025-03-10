@@ -14,7 +14,7 @@ char *_strdup(char *str)
 	char *pointeurretour = NULL;
 
 	/* Calcule la longueur de la chaine */
-	while (pointeurstr != '\0')
+	while (*pointeurstr != '\0')
 	{
 		pointeurstr++;
 		longueur++;
