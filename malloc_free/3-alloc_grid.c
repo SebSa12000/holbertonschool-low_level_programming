@@ -5,27 +5,27 @@
 
 
 /**
- * alloc_grid - allocation de grille 
- * @height : hauteur 
- * @width : largeur 
+ * alloc_grid - allocation de grille
+ * @height : hauteur
+ * @width : largeur
  *
- * Return: pointeur sur tableau 
+ * Return: pointeur sur tableau
  */
 int **alloc_grid(int height, int width)
 {
-	int **tab ;
-	int i = 0, j =  0;
-	
-	if ( width < 1 || height < 1 )
+	int **tab;
+	int i = 0, j = 0;
+
+	if (width < 1 || height < 1)
 		return (NULL);
 
 	tab = malloc(sizeof(int *) * width);
-	if ( tab != NULL )
-	{	
+	if (tab != NULL)
+	{
 		for (i = 0; i < width; i++)
 		{
 			tab[i] = malloc(sizeof(int) * height);
-			if ( tab[i] == NULL )
+			if (tab[i] == NULL)
 			{
 				for (j = 0; j < i; j++)
 					free(tab[j]);
@@ -38,7 +38,7 @@ int **alloc_grid(int height, int width)
 				tab[i][j] = 0;
 			}
 		}
-		return tab;
+		return (tab);
 	}
 	return (NULL);
 }
