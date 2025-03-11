@@ -6,12 +6,12 @@
 
 /**
  * alloc_grid - allocation de grille 
- * @width : largeur 
  * @height : hauteur 
+ * @width : largeur 
  *
  * Return: pointeur sur tableau 
  */
-int **alloc_grid(int width, int height)
+int **alloc_grid(int height, int width)
 {
 	int **tab ;
 	int i = 0, j =  0;
