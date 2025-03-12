@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * malloc_checked - allocation memoire 
+ * malloc_checked - allocation memoire
  * @b : taille memoire
  *
  * Return: pointeur sur tableau
