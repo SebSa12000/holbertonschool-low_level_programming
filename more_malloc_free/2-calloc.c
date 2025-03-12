@@ -10,7 +10,7 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int i = 0;
-	int *pretour;
+	char *pretour;
 	void *retour;
 
 	if (size <= 0 || nmemb <= 0)
