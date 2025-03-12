@@ -19,7 +19,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (retour != NULL)
 	{
 		pretour = retour;
-		for (i = 0; i < size; i++)
+		for (i = 0; i < nmemb; i++)
 		{
 			*pretour = 0;
 			pretour++;
