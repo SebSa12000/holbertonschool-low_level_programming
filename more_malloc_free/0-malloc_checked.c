@@ -8,11 +8,13 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	void *retour = malloc(b);
+	void *retour;
+
+	retour	= malloc(b);
 
 	if (retour != NULL)
 	{
 		return (retour);
 	}
-	return (NULL);
+	return (98);
 }
