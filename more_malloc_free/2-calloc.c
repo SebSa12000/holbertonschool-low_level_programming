@@ -21,7 +21,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		pretour = retour;
 		for (i = 0; i < size; i++)
 		{
-			pretour = 0;
+			*pretour = 0;
 			pretour++;
 		}
 		return (retour);
