@@ -3,22 +3,22 @@
 /**
  * _calloc - cree un tableau
  * @nmemb : longueur
- * @size : size 
+ * @size : size
  *
  * Return: pointeur sur tableau
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int i = 0;
-
+	int *pretour;
 	void *retour;
 
 	if (size <= 0 || nmemb <= 0)
 		return (NULL);
 	retour = malloc(size * nmemb);
-	int *pretour = retour;
 	if (retour != NULL)
 	{
+		pretour = retour;
 		for (i = 0; i < size; i++)
 		{
 			pretour = 0;
