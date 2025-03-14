@@ -27,6 +27,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 				}
 				*ptrchar = '\0';
 			}
+			else
+			{
+				free(ptr);
+				return (NULL);
+			}
 		}
 		ptr->age = age;
 		if (owner != NULL)
@@ -38,6 +43,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 				while (*owner != '\0')
 					*ptrchar2++ = *owner++;
 				*ptrchar2 = '\0';
+			}
+			else
+			{
+				free(ptr->name);
+				free(ptr);
+				return (NULL);
 			}
 		}
 		return (ptr);
