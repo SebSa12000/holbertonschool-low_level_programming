@@ -9,23 +9,23 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *ptr = malloc(sizeof(dog_t));
-	char *ptrname = name;
-	char *ptrname2;
+	char *ptrchar, *ptrchar2, *ptr2 = name;
 
 	if (ptr != NULL)
 	{
 		if (name != NULL)
 		{
-			ptr->name = malloc(sizeof(name) + 1);
+			(*ptr).name = malloc(sizeof(name) + 1);
 			if (ptr->name != NULL)
 			{
-				ptrname2 = name;
-				while (*ptrname2 != '\0')
+				ptrchar = (*ptr).name;
+				while (*ptr2 != '\0')
 				{
-					*ptrname = *ptrname2;
-					ptrname++;
-					ptrname2++;
+					*ptrchar = *ptr2;
+					ptr2++;
+					ptrchar++;
 				}
+				*ptrchar = '\0';
 			}
 		}
 		ptr->age = age;
@@ -34,14 +34,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 			ptr->owner = malloc(sizeof(owner) + 1);
 			if (ptr->owner != NULL)
 			{
-				ptrname = ptr->owner;
-				ptrname2 = owner;
-				while (*ptrname2 != '\0')
-				{
-					*ptrname = *ptrname2;
-					ptrname++;
-					ptrname2++;
-				}
+				ptrchar2 = ptr->owner;
+				while (*owner != '\0')
+					*ptrchar2++ = *owner++;
+				*ptrchar2 = '\0';
 			}
 		}
 		return (ptr);
