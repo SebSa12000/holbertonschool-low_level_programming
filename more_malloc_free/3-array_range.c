@@ -14,7 +14,7 @@ int *array_range(int min, int max)
 	int *pretour;
 	int length = 0;
 
-	if (min < 0 || max < 0 || min > max)
+	if (min > max)
 		return (NULL);
 
 	length = max - min + 1;
