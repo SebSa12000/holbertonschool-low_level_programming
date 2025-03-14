@@ -24,7 +24,7 @@ int *array_range(int min, int max)
 		pretour = retour;
 		for (i = 0; i < (length); i++)
 		{
-			*pretour = i;
+			*pretour = i + min;
 			pretour++;
 		}
 		return (retour);
