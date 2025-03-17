@@ -1,7 +1,7 @@
 /**
- * print_name - Affiche en appelant une fonction 
+ * print_name - Affiche en appelant une fonction
  * @name: Chaine a afficher
- * @f: pointeur sur fonction 
+ * @f: pointeur sur fonction
  *
  */
 void print_name(char *name, void (*f)(char *))
