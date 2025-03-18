@@ -22,7 +22,17 @@ int main(int ac, char **av)
 		operande = av[2];
 		f = get_op_func(operande);
 		if (f != NULL)
-			printf("%d\n", f(valeur1, valeur2) );
+		{
+			if ((f == op_mod || f == op_div) && (valeur2 == 0))
+			{
+				printf("Error\n");
+				exit(100);
+			}
+			else
+			{
+				printf("%d\n", f(valeur1, valeur2) );
+			}
+		}
 		else
 		{
 			printf("Error\n");
