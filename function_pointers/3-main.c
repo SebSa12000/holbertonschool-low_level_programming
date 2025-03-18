@@ -23,7 +23,7 @@ int main(int ac, char **av)
 		f = get_op_func(operande);
 		if (f != NULL)
 		{
-			if ((f == op_mod || f == op_div) && (valeur2 == 0))
+			if ((*f == op_mod || *f == op_div) && (valeur2 == 0))
 			{
 				printf("Error\n");
 				exit(100);
