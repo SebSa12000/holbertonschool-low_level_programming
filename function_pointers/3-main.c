@@ -25,7 +25,8 @@ int main(int ac, char **av)
 			printf("%d\n", f(valeur1, valeur2) );
 		else
 		{
-			printf("f null");
+			printf("Error\n");
+			exit(99);
 		}
 	}
 	else
