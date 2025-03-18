@@ -14,6 +14,7 @@ int main(int ac, char **av)
 	int (*f)(int a, int b);
 	int valeur1 = 0, valeur2 = 0;
 	char *operande;
+
 	if (ac == 4)
 	{
 		(void)f;
@@ -30,7 +31,7 @@ int main(int ac, char **av)
 			}
 			else
 			{
-				printf("%d\n", f(valeur1, valeur2) );
+				printf("%d\n", f(valeur1, valeur2));
 			}
 		}
 		else
