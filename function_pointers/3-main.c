@@ -24,9 +24,14 @@ int main(int ac, char **av)
 		if (f != NULL)
 			printf("%d\n", f(valeur1, valeur2) );
 		else
+		{
 			printf("f null");
+		}
 	}
 	else
-		printf("erreur de paralmetre%d\n",ac);
+	{
+		printf("Error\n");
+		exit(98);
+	}
 	return (0);
 }
