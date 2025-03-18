@@ -22,7 +22,7 @@ int main(int ac, char **av)
 		operande = av[2];
 		f = get_op_func(operande);
 		if (f != NULL)
-			printf("%d %s %d %d\n", valeur1, operande, valeur2, f(valeur1, valeur2) );
+			printf("%d\n", f(valeur1, valeur2) );
 		else
 			printf("f null");
 	}
