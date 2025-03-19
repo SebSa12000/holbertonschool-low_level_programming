@@ -7,14 +7,11 @@
  *
  * Return: Somme totale
  */
-int print_numbers(const char* separator, const unsigned int nb, ...)
+void print_numbers(const char* separator, const unsigned int nb, ...)
 {
 	int retour = 0, c = 0;
 	unsigned int i = 0;
 	va_list ap;
-
-	if (nb == 0)
-		return (0);
 
 	va_start(ap, nb);
 	for (i = 0; i < nb; i++)
@@ -25,5 +22,4 @@ int print_numbers(const char* separator, const unsigned int nb, ...)
 			printf("%s", separator);
 	}
 	printf("\n");
-	return (retour);
 }
