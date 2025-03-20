@@ -1,7 +1,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
- * print_string - print a list of string 
+ * print_strings - print a list of string
  * @separator : separator
  * @nb : number of parameter
  *
