@@ -1,13 +1,13 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
- * print_numbers - print a list of numbers 
+ * print_numbers - print a list of numbers
  * @separator : separator
  * @nb : number of parameter
  *
  * Return: Somme totale
  */
-void print_numbers(const char* separator, const unsigned int nb, ...)
+void print_numbers(const char *separator, const unsigned int nb, ...)
 {
 	int un_int = 0;
 	unsigned int i = 0;
