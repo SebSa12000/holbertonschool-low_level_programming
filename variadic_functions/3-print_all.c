@@ -15,7 +15,7 @@ void print_all(const char * const format, ...)
 	const char *ptr = format;
 
 	va_start(ap, format);
-	while (ptr[i] != '\0')
+	while (ptr != NULL && ptr[i] != '\0')
 	{
 		if (flag_sep == 1)
 		{
