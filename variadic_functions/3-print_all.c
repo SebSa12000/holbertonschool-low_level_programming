@@ -28,9 +28,8 @@ void print_all(const char * const format, ...)
 				flag_sep = 1;
 				une_chaine = va_arg(ap, char *);
 				if (une_chaine == NULL)
-					printf("(nil)");
-				else
-					printf("%s", une_chaine);
+					une_chaine = "(nil)";
+				printf("%s", une_chaine);
 				break;
 			case 'i':
 				flag_sep = 1;
