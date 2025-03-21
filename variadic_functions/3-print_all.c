@@ -1,5 +1,6 @@
 #include <stdarg.h>
 #include <stdio.h>
+#include <string.h>
 /**
  * print_strings - print a list of string
  * @separator : separator
@@ -31,20 +32,20 @@ void print_all(const char * const format, ...)
 					printf("%s", une_chaine);
 				break;
 			case 'i':
-				flag_sep = 1
+				flag_sep = 1;
 					printf("%d", va_arg(ap, int));
 				break;
 			case 'c':
-				printf("%c", va_arg(ap, char));
+				printf("%c", va_arg(ap, int));
 				flag_sep = 1;
 				break;
 			case 'f':
 				flag_sep = 1; 
-				printf("%f", va_arg(ap, float));
+				printf("%f", va_arg(ap, double));
 				break;
 		}
-		if (separator != NULL && i < nb - 1 && flag_sep == 1)
-			printf("%s", separator);
+		if (flag_sep == 1)
+			printf(", ");
 	}
 	printf("\n");
 }
