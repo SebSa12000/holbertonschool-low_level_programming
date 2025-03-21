@@ -2,9 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 /**
- * print_strings - print a list of string
- * @separator : separator
- * @nb : number of parameter
+ * print_all - mini printf
+ * @format : format i, c, f, s
  *
  */
 void print_all(const char * const format, ...)
@@ -13,18 +12,20 @@ void print_all(const char * const format, ...)
 	unsigned int i = 0;
 	va_list ap;
 	int flag_sep = 0;
-
+	const char *ptr = format;
 
 	va_start(ap, format);
-	for (i = 0; i < strlen(format); i++)
+	while (ptr[i] != '\0')
 	{
-		flag_sep = 0;
-		switch ( format[i] )
+		if (flag_sep == 1)
 		{
-
+			printf(", ");
+			flag_sep = 0;
+		}
+		switch (format[i])
+		{
 			case 's':
 				flag_sep = 1;
-
 				une_chaine = va_arg(ap, char *);
 				if (une_chaine == NULL)
 					printf("(nil)");
@@ -40,12 +41,11 @@ void print_all(const char * const format, ...)
 				flag_sep = 1;
 				break;
 			case 'f':
-				flag_sep = 1; 
+				flag_sep = 1;
 				printf("%f", va_arg(ap, double));
 				break;
 		}
-		if (flag_sep == 1)
-			printf(", ");
+		i++;
 	}
 	printf("\n");
 }
