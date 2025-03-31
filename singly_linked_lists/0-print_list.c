@@ -3,6 +3,24 @@
 #include <string.h>
 
 /**
+ * _strlen - calculate the length of a string
+ * @s: string to calculate
+ *
+ * Return: length
+ */
+int _strlen(char *s)
+{
+	int retour = 0;
+
+	while (*s != '\0')
+	{
+		s++;
+		retour++;
+	}
+	return (retour);
+}
+
+/**
  * print_list - print a list chain
  * @h : head
  *
@@ -22,7 +40,7 @@ size_t print_list(const list_t *h)
 			}
 			else
 			{
-				printf("[%d] %s\n", (int)strlen(h->str), h->str);
+				printf("[%d] %s\n", (int)_strlen(h->str), h->str);
 			}
 			length++;
 			h = h->next;
