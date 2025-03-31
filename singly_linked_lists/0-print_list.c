@@ -80,7 +80,7 @@ size_t print_list(const list_t *h)
 	{
 		while (h != NULL)
 		{
-			if (h->str== NULL)
+			if (h->str == NULL)
 			{
 				_putchar('[');
 				_putchar('0');
@@ -93,7 +93,7 @@ size_t print_list(const list_t *h)
 				_putchar('[');
 				itoa(_strlen(string), buffer);
 				string2 = buffer;
-				while ( *string2 != '\0' )
+				while (*string2 != '\0')
 				{
 					_putchar(*string2);
 					string2++;
@@ -101,15 +101,15 @@ size_t print_list(const list_t *h)
 				_putchar(']');
 			}
 			_putchar(' ');
-			while ( *string != '\0' )
+			while (*string != '\0')
 			{
 				_putchar(*string);
 				string++;
 			}
 			_putchar('\n');
-			length ++;
+			length++;
 			h = h->next;
-		} 
+		}
 	}
-	return length;
+	return (length);
 }
