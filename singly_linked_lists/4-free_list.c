@@ -23,4 +23,9 @@ void free_list(list_t *head)
 		free(ptr);
 		ptr = ptr2;
 	}
+	if (ptr != NULL && ptr->next == NULL)
+	{
+		free(ptr->str);
+		free(ptr);
+	}
 }
