@@ -5,7 +5,7 @@
 
 
 /**
- * free_dlistint - free a list link 
+ * free_dlistint - free a list link
  * @head : head
  *
  */
