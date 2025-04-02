@@ -18,17 +18,17 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 
 	ptr_node = head;
 	if (index == 0 && head != NULL)
-		return head;
+		return (head);
 	if (index == 0 && head == NULL)
-		return NULL;
+		return (NULL);
 	while (ptr_node != NULL && ptr_node->next != NULL && i < index)
 	{
 		ptr_node = ptr_node->next;
 		i++;
 	}
 	if (ptr_node != NULL && i == index)
-		return ptr_node;
+		return (ptr_node);
 	else
-		return NULL;
+		return (NULL);
 
 }
