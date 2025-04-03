@@ -7,26 +7,26 @@
 
 /**
  * delete_dnodeint_at_index - delete index
- * @head : head
+ * @h : head
  * @index : index
  *
  * Return: node
  */
-int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
+int delete_dnodeint_at_index(dlistint_t **h, unsigned int index)
 {
 	unsigned int i = 0;
-	dlistint_t *bfr_node = *head, *tmp_node = *head;
+	dlistint_t *bfr_node = *h, *tmp_node = *h;
 
-	if (index == 0 && *head)
+	if (index == 0 && *h)
 	{
-		if ((*head)->next)
+		if ((*h)->next)
 		{
-			*head = (*head)->next;
-			(*head)->prev = NULL;
+			*h = (*h)->next;
+			(*h)->prev = NULL;
 			free(tmp_node);
 		}
 		else
-			*head = NULL;
+			*h = NULL;
 		return (1);
 	}
 	while (i < index - 1 && bfr_node)
