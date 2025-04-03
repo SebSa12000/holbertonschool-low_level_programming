@@ -6,7 +6,7 @@
 
 
 /**
- * insert_dnodeint_at_index - insert a node in the position n 
+ * insert_dnodeint_at_index - insert a node in the position n
  * @h : head
  * @idx : position to add
  * @n : value to add
