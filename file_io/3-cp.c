@@ -38,7 +38,7 @@ int main(int ac, char **av)
 		exit(97);
 	}
 	fdw = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	if (fdw < 0 || (av[2] != NULL && strlen(av[2] ) != 0))
+	if (fdw < 0)
 	{
 		dprintf(2, " Error: Can't write to %s\n", av[2]);
 		exit(99);
