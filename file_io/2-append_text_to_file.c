@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 /**
- * append_text_to_file : append a text to file
+ * append_text_to_file - append a text to file
  * @filename : name of file
  * @text_content : content of text
  *
