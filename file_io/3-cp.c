@@ -48,14 +48,16 @@ int main(int ac, char **av)
 	if (buffer == NULL)
 		exit(99);
 	fd = open(av[1], O_RDONLY);
-	length = read(fd, buffer, longueur);
+	if (fd >= 0)
+		length = read(fd, buffer, longueur);
 	if (fd < 0 || ((int) length) == -1)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
 	fdw = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	length = write(fdw, buffer, length);
+	if (fdw >= 0)
+		length = write(fdw, buffer, length);
 	if (fdw < 0 || ((int) length) == -1)
 	{
 		dprintf(2, " Error: Can't write to NAME_OF_THE_FILE%s\n", av[2]);
