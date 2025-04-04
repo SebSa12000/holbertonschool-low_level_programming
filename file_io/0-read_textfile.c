@@ -28,6 +28,8 @@ size_t read_textfile(const char *filename, size_t letters)
 	longueur = (int)letters;
 
 	buffer = malloc(sizeof(char)*longueur);
+	if (buffer == NULL)
+		return -1;
 
     	length = read(fd, buffer, longueur);
 
@@ -35,5 +37,6 @@ size_t read_textfile(const char *filename, size_t letters)
 		return 0;
 	printf("%s",buffer);		
 	free(buffer);
+	close(fd);
 	return length;
 }
