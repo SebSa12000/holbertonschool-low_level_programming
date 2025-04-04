@@ -6,6 +6,20 @@
 #include <stdlib.h>
 
 /**
+ * close_fd - close a fd
+ * @fd : file descriptor
+ *
+ */
+void close_fd(int fd)
+{
+	if (close(fd) == -1)
+	{
+		dprintf(2, "Error: Can't close %d\n", fd);
+		exit(100);
+	}
+}
+
+/**
  * main - check the code
  * @ac : nomber of argument
  * @av : variadic params
@@ -34,23 +48,20 @@ int main(int ac, char **av)
 	if (buffer == NULL)
 		exit(99);
 	fd = open(av[1], O_RDONLY);
-	if (fd < 0)
+	length = read(fd, buffer, longueur);
+	if (fd < 0 || length == -1)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
-	length = read(fd, buffer, longueur);
-	write(fdw, buffer, length);
-	if (close(fd) == -1)
+	fdw = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	length = write(fdw, buffer, length);
+	if (fdw < 0 || length == -1)
 	{
-		dprintf(2, "Error: Can't close %d\n", fd);
-		exit(100);
+		dprintf(2, " Error: Can't write to NAME_OF_THE_FILE%s\n", av[2]);
+		exit(99);
 	}
-	if (close(fdw) == -1)
-	{
-		dprintf(2, "Error: Can't close %d\n", fdw);
-		exit(100);
-	}
-	close(fdw);
+	close_fd(fd);
+	close_fd(fdw);
 	return (0);
 }
