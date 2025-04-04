@@ -32,7 +32,7 @@ int main(int ac, char **av)
 	char *buffer;
 	size_t length;
 
-	if (ac != 3) 
+	if (ac != 3)
 	{
 		dprintf(2, "Usage: cp file_from file_to\n");
 		exit(97);
