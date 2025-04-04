@@ -32,15 +32,15 @@ int main(int ac, char **av)
 	char *buffer;
 	size_t length;
 
-	if (ac != 3)
+	if (ac != 3) 
 	{
 		dprintf(2, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	fdw = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	if (fdw < 0)
+	if (fdw < 0 || (av[2] != NULL && strlen(av[2] ) != 0))
 	{
-		dprintf(2, " Error: Can't write to NAME_OF_THE_FILE%s\n", av[2]);
+		dprintf(2, " Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
 	longueur = 10000 * sizeof(char);
