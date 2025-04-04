@@ -34,7 +34,7 @@ size_t read_textfile(const char *filename, size_t letters)
 		return (-1);
 
 	length = read(fd, buffer, longueur);
-	if (longueur > length)
+	if (longueur > (int)length)
 	{
 		buffer[length] = '\0';
 	}
